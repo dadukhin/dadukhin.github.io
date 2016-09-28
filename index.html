@@ -2,13 +2,14 @@
 <html >
   <head>
     <meta charset="UTF-8">
-    <title>Portfolio Page</title>
+    <title>Portfolio layout</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
     <link rel="stylesheet" href="css/normalize.css">
 
-    <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
-<link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/flat-ui/2.2.2/css/flat-ui.css'>
+    <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css'>
+<link rel='stylesheet prefetch' href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700'>
+<link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css'>
 
         <link rel="stylesheet" href="css/style.css">
 
@@ -20,266 +21,239 @@
 
   <body>
 
-    <nav class="navbar navbar-inverse navbar-fixed-top transparent">
-  <div class="container">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-      </button>
-      <a class="navbar-brand" href="http://www.coding123.org/" target="newwindow">Edd Yerburgh</a>
-    </div> <!-- .navbar-header -->
-    <div class="collapse navbar-collapse" id="navbar">
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#about">About</a></li>
-        <li><a href="#portfolio">Portfolio</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </div> <!-- .navbar-collapse -->
-  </div> <!-- .container -->
-</nav>
-<main data-spy="scroll" data-target=".navbar" data-offset="50">
-  <div class="jumbotron photo-cover text-inverse">
-      <div class="col-md-6 text-center center">
-        <h1>Edd Yerburgh</h1>
-        <p >FrontEnd Web Dev</p>
-        <a href="#about">
-        <span class="fui-triangle-down large"></span>
-        </a>
-      </div> <!-- .col-md-6 -->
-    </div> <!-- .jumbotron -->
-  <div id="about" class="jumbotron">
-    <div class="container">
-      <div class="row">
-        <div class=" col-md-8 col-md-offset-2 text-center">
-        <h2>About</h2>
-          <hr>
-        <p class="lead">
-          Hi, my name's Edd - I'm a FrontEnd Dev and Owner of <a href="http://www.coding123.org/">Coding123.co.uk</a>
-        </p>
-        <p class="lead"> 
-         I work with CSS, HTML, JavaScript, PHP, and mySQL to create beautiful, functional web pages for my clients.
-        </p>
-        <p>
-          As well as making websites, I enjoy playing squash, riding my bike, and playing guitar. 
-          </p>
-          <p>
-            Send me a PSD and I'll send you a quote.
-          </p>
-        <img src="http://2.gravatar.com/avatar/e71155c8ed35fb40c1047fd0046b02de?s=100&r=pg&d=mm" alt="Edd Yerburgh" class="center-block img-responsive img-circle"/>
-        </div> <!-- .col-md-8 -->
-      </div> <!-- .row -->
-    </div> <!-- .container -->
-  </div> <!-- #about -->  
-  <div id="portfolio" class="jumbotron background-primary text-inverse">
-    <div class="container">
-      <div class="row">
-        <h2 class="text-center">Portfolio</h2>
-        <hr>
-        <div class="col-xs-6 col-md-3">
-          <a class="thumbnail" page="coding123">
-              <img src="http://www.coding123.org/wp-content/uploads/2016/03/coding123-2-1.svg" alt="Coding123" >
-              <div class="thumbnail-overlay" page="coding123">
-                <span class="glyphicon glyphicon-info-sign text-inverse large center"></span>
-              </div>
-          </a>
-        </div> <!-- .col-md-3 -->
-        <div class="col-xs-6 col-md-3">
-          <a class="thumbnail" page="royal-blue">
-            <img src="http://www.coding123.org/wp-content/uploads/2016/03/royal-blue.svg" alt="Royal Blue WordPress Theme" page="royal-blue">
-            <div class="thumbnail-overlay" page="royal-blue">
-              <span class="glyphicon glyphicon-info-sign text-inverse large center"></span>
-            </div>
-          </a>
-        </div> <!-- .col-md-3 -->
-        <div class="col-xs-6 col-md-3">
-          <a class="thumbnail" page="swatch-picker">
-            <img src="http://www.coding123.org/wp-content/uploads/2016/03/color-swatch-generator.svg" alt="Color Swatch Picker">
-            <div class="thumbnail-overlay" page="swatch-picker">
-              <span class="glyphicon glyphicon-info-sign text-inverse large center"></span>
-            </div>            
-          </a>
-        </div> <!-- .col-md-3 -->
-        <div class="col-xs-6 col-md-3">
-          <a class="thumbnail" page="abintus">
-            <img src="http://www.coding123.org/wp-content/uploads/2016/03/abintus.svg" alt="Wikipedia Viewer" >
-            <div class="thumbnail-overlay" page="abintus">
-              <span class="glyphicon glyphicon-info-sign text-inverse large center"></span>
-            </div>            
-          </a>
-        </div> <!-- .col-md-3 -->        
-      </div> <!-- .row -->
-    </div> <!-- .container -->
-  </div> <!-- #portfolio -->
-  <div id="contact" class="jumbotron">
-    <div class="container">
-      <div class="col-md-8 col-md-offset-2 text-center">
-        <h2 class="">Get In Touch</h2>
-        <hr>
-        <form action="mailto:edward.yerburgh@gmail.com"  enctype="text/plain" method="post">
-        <div class="form-group">
-          <label for="InputEmail">Email address</label>
-          <input type="email" class="form-control" id="InputEmail" placeholder="Email">
-        </div> <!-- .form-group -->
-        <div class="form-group">
-          <label for="message">Message</label>
-          <textarea id="message" class="form-control" rows="3"></textarea>
-        </div> <!-- .form-group -->
-        <input type="submit" name="submit" class="btn btn-inverse">
-      </form>
-      </div> <!-- .col-md-8 -->
-    </div> <!-- .container -->
-  </div> <!-- #contact -->
-
-<div class="text-center text-inverse navbar-inverse">
-    <div class="container">
-      <div class="row">
-        <div class="footer-col col-md-4">
-            <h3>Location</h3>
-                <p>Kingscote<br>Tetbury, Glos<br> GL88XY</p>
-        </div> <!-- .footer-col -->
-        <div class="footer-col col-md-4">
-            <h3>Connect With Me</h3>
-            <ul class="list-inline">
-              <li>
-                   <a class="medium" href="https://github.com/eddyerburgh" target="newwindow"><span class="fui-github"></span></a>
-              </li>
-              <li>
-                  <a class="medium" href="https://www.linkedin.com/in/edd-yerburgh-74aa5768" target="newwindow"><span class="fui-linkedin"></span></a>
-              </li>
-              <li>
-                  <a class="medium" href="https://twitter.com/EddYerburgh" target="newwindow"><span class="fui-twitter"></span></a></a>
-              </li>
-            </ul>
-        </div> <!-- .footer-col -->
-        <div class="footer-col col-md-4">
-            <h3>Hire Me</h3>
-            <p>I'm moving to London this year and am looking for a job. Can you help?</p>
-        </div> <!-- .footer-col -->
-      </div> <!-- .row -->
-    </div> <!-- .container --> 
-    <div class="background-secondary">
+    <div class="wrapper">
+  <header role="header">
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
       <div class="container">
-        <div class="row">
-          <div class="col-lg-12">
-             Copyright © Edd Yerburgh 2016
-          </div> <!-- .col-lg-12 -->
-        </div> <!-- .row -->
-      </div> <!-- .container  -->
-    </div> <!-- .background-secondary -->
-  </div> <!--  -->
-<div id="coding123" class="full-screen">
-  <div class="container">
-      <div class="col-md-6 text-center center">
-      <span class="glyphicon glyphicon-remove pull-right large close-window"></span>
+        <div class="navbar-header">
+          <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".navbar-collapse" role="button">
+            <span class="sr-only">Toggle Navigation</span>
+            
+            <span class="icon-bar"></span>
+            
+            <span class="icon-bar"></span>
+            
+            <span class="icon-bar"></span>
+          </button>
+
+          <a href="#" class="navbar-brand">Devero</a>
+        </div>
+
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav navbar-right js-nav">
+            <li><a href="#home">Home</a></li>
+
+            <li><a href="#about">About</a></li>
+
+            <li><a href="#services">Services</a></li>
+
+            <li><a href="#folio">Folio</a></li>
+
+            <li><a href="#testimonials">Testimonials</a></li>
+
+            <li><a href="#contact">Contact</a></li>
+
+            <li><a href="http://alexsblog.org" target="_blank">Blog</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <section id="home" class="sec-main">
+    <h1 class="main-heading">Where creativity happens.</h1>
+  </section>
+
+  <section id="about" class="sec-about">
+    <div class="container">
+      <h1>About me</h1>
+
+      <hr />
+
       <div class="row">
-        <div class="col-md-4 col-md-offset-4">
-          <a href="http://coding123.org"><img src="http://www.coding123.org/wp-content/uploads/2016/03/coding123-2-1.svg" alt="Coding123 Logo"></a>
-        </div> <!-- .col-md-4 -->
-      </div> <!-- .row -->           
-      <p class="lead">Coding123 is a coding blog with tutorials and code snippets running on WordPress.</p>
-      <p>
-        This is where I blog about JavaScript, CSS and all things code. I'm currently looking for authors if you're interested.
-      </p>
-      <p>
-        I developed the theme <a href="https://github.com/eddyerburgh/clean-coding">Clean Coding</a> for the site, which includes features such as click-to-copy code blocks and syntax highlighting.
-      </p>
-      <hr>
+        <div class="col-sm-6 col-sm-offset-3">
+          <p>Hi, my name is Alex Devero and I am a Web Designer & Developer based in Prague. I love crafting beautiful web pages in HTML5, CSS3 and JavaScript or jQuery. My other skills include WordPress, Photoshop, Illustrator. You can grab my CV in
+            <a href="#">English</a> or <a href="#">Czech</a> version. If you want to hire me or just to talk, <a class="js-connect" href="#footer">connect</a> with me.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="services" class="sec-services">
+    <div class="container">
+      <h1>Services</h1>
+
+      <hr />
+
       <div class="row">
-        <div class="col-md-3 col-md-offset-3">
-          <a class="btn-inverse btn-block btn-lg" target="newwindow" href="http://www.coding123.org/">View</a>
-        </div> <!-- .col-md-6 -->
-        <div class="col-md-3">
-          <a class="btn-danger btn-lg close-window btn-block">Close</a>
-        </div> <!-- .col-md-6 -->        
-      </div> <!-- .row -->      
-    </div> <!-- .col-md-6 -->
-  </div> <!-- .container -->
-</div> <!-- .full-screen -->
-<div id="royal-blue" class="full-screen">
-  <div class="container">
-    <div class="col-md-6 text-center center">
-      <span class="glyphicon glyphicon-remove pull-right large close-window"></span>
+        <div class="col-sm-4">
+          <i class="fa fa-4x fa-paint-brush"></i>
+
+          <h2 class="h3">Beautiful Design</h2>
+
+          <p>Every website is beautiful, unique and tailored to suit your needs and requirements.</p>
+        </div>
+
+        <div class="col-sm-4">
+          <i class="fa fa-4x fa-code"></i>
+
+          <h2 class="h3">Clean Code</h2>
+
+          <p>All websites are written in valid and clean HTML5 / CSS3 &amp; JavaScript (jQuery).</p>
+        </div>
+
+        <div class="col-sm-4">
+          <i class="fa fa-4x fa-tablet"></i>
+
+          <h2 class="h3">Always Responsive</h2>
+
+          <p>All websites are responsive. They will look great on desktop, tablets and mobile phones too.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="folio" class="sec-folio">
+    <div class="container">
+      <h1>Previous Work</h1>
+
+      <hr />
+
       <div class="row">
-        <div class="col-md-4 col-md-offset-4">
-          <a href="https://github.com/eddyerburgh/royal-blue"><img src="http://www.coding123.org/wp-content/uploads/2016/03/royal-blue.svg"></a>
-        </div> <!-- .col-md-4 -->
-      </div> <!-- .row -->       
-      <p class="lead">
-        Royal blue is a responsive WordPress theme.
-      </p>
-      <p>
-        I developed this theme with underscores. It's built to be compatible with WordPress plugins and features, including BeaverBuilder, Formidable Forms, JetPack and Toolset Type and Views.
-      </p>
-      <hr>
+        <div class="col-md-4">
+          <img class="center-block" src="https://source.unsplash.com/Oog0wehKxYs/450x450" alt="By Håkon Sataøen" />
+        </div>
+
+        <div class="col-md-4">
+          <img class="center-block" src="https://source.unsplash.com/EfpOiZvPbT4/450x450" alt="By Samuel Zeller" />
+        </div>
+
+        <div class="col-md-4">
+          <img class="center-block" src="https://source.unsplash.com/2aoVQXwLf3g/450x450" alt="By Scott Webb" />
+        </div>
+      </div>
+
       <div class="row">
-        <div class="col-md-3 col-md-offset-3">
-          <a class="btn-inverse btn-block btn-lg" target="newwindow" href="https://github.com/eddyerburgh/royal-blue">View</a>
-        </div> <!-- .col-md-6 -->
-        <div class="col-md-3">
-          <a class="btn-danger btn-lg close-window btn-block">Close</a>
-        </div> <!-- .col-md-6 -->        
-      </div> <!-- .row -->      
-    </div> <!-- .col-md-6 -->
-  </div> <!-- .container -->
-</div> <!-- .full-screen -->
-<div id="swatch-picker" class="full-screen">
-  <div class="container">
-    <div class="col-md-6 text-center center">
-      <span class="glyphicon glyphicon-remove pull-right large close-window"></span>
+        <div class="col-md-4">
+          <img class="center-block" src="https://source.unsplash.com/o2KD7JtqTlk/450x450" alt="By Has Bonk" />
+        </div>
+
+        <div class="col-md-4">
+          <img class="center-block" src="https://source.unsplash.com/TV2ET43jK0w/450x450" alt="By Scott Webb" />
+        </div>
+
+        <div class="col-md-4">
+          <img class="center-block" src="https://source.unsplash.com/lZ2LB1s_z7s/450x450" alt="By Daniel Lozano Valdés" />
+        </div>
+      </div>
+
       <div class="row">
-        <div class="col-md-4 col-md-offset-4">
-          <a href="http://swatches.coding123.org"><img src="http://www.coding123.org/wp-content/uploads/2016/03/color-swatch-generator.svg"></a>
-        </div> <!-- .col-md-4 -->
-      </div> <!-- .row -->          
-      <p class="lead">Generate and store color swatches that can be copied on click</p>
-      <p>
-        Whilst developing a Genesis theme, I kept finding myself copying colors with Chrome dev tools. This color swatch picker was built to stop me having to do that again.</p>
-      <p>
-        You add swatches of color that are copied to the clipboard on click for quickly accessing various colors for a project. It has the option to copy the colors as RGB, Hex or CSS color, and it's saved me heaps of time.
-      </p>
-      <hr>
+        <div class="col-md-4">
+          <img class="center-block" src="https://source.unsplash.com/o4qL4FuwN6I/450x450" alt="By Anthony DELANOIX" />
+        </div>
+
+        <div class="col-md-4">
+          <img class="center-block" src="https://source.unsplash.com/ej7RYC0ED_c/450x450" alt="By Patrick Pilz" />
+        </div>
+
+        <div class="col-md-4">
+          <img class="center-block" src="https://source.unsplash.com/0G1r-Cg0zS8/450x450" alt="By Vita Vilcina" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="testimonials" class="sec-testimonials">
+    <div class="container">
+      <h1>Clients said</h1>
+
+      <hr />
+
       <div class="row">
-        <div class="col-md-3 col-md-offset-3">
-          <a class="btn-inverse btn-block btn-lg" target="newwindow" href="http://swatches.coding123.org">View</a>
-        </div> <!-- .col-md-6 -->
-        <div class="col-md-3">
-          <a class="btn-danger btn-lg close-window btn-block">Close Window</a>
-        </div> <!-- .col-md-6 -->        
-      </div> <!-- .row -->
-    </div> <!-- .col-md-6 -->
-  </div> <!-- .container -->
-</div> <!-- .full-screen -->
-<div id="abintus" class="full-screen">
-  <div class="container">
-    <div class="col-md-6 text-center center">
-      <span class="glyphicon glyphicon-remove pull-right large close-window"></span>
+        <div class="col-sm-4">
+          <p class="text-center">"Alex did great job when designing our website. It was pleasure to work with him and I'm sure we will hire him again."</p>
+
+          <p class="text-right">&mdash; Marc Andressen</p>
+        </div>
+
+        <div class="col-sm-4">
+          <p class="text-center">"Alex proved to be truly creative designer who is able to create just stunning design I immediately fell in love with!"</p>
+
+          <p class="text-right">&mdash; Emily Cooper</p>
+        </div>
+
+        <div class="col-sm-4">
+          <p class="text-center">"I have worked with several different people and it always seemed like a pain—luckily I found Alex Devero. Thank you Alex!"</p>
+
+          <p class="text-right">&mdash; Scott Grubber</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="sec-contact">
+    <div class="container">
+      <h1>Hire me</h1>
+
+      <hr />
+
       <div class="row">
-        <div class="col-md-4 col-md-offset-4">
-          <a href="http://www.abintus.co.uk/" target="newwindow"><img src="http://www.coding123.org/wp-content/uploads/2016/03/abintus.svg" alt="AbIntus Logo"></a>
-        </div> <!-- .col-md-4 -->
-      </div> <!-- .row -->
-      <p class="lead">
-        The first WordPress theme I developed from start to finish
-      </p>
-      <p>
-        This is the first theme I developed from start to finish while working at Mushroom Internet. I had several meetings with the client to keep them updated on the development process. Before handing the site over I gave them a two hour training session on how to use WordPress and the theme.
-      </p>
-      <hr>
-      <div class="row">
-        <div class="col-md-3 col-md-offset-3">
-          <a class="btn-inverse btn-block btn-lg" target="newwindow" href="http://www.abintus.co.uk/">View</a>
-        </div> <!-- .col-md-6 -->
-        <div class="col-md-3">
-          <a class="btn-danger btn-lg close-window btn-block">Close</a>
-        </div> <!-- .col-md-6 -->        
-      </div> <!-- .row -->
-    </div> <!-- .col-md-6 -->
-  </div> <!-- .container -->
-</div> <!-- .full-screen -->
-</main>
-    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>
-<script src='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js'></script>
+        <div class="col-sm-4 col-sm-offset-4">
+          <form class="center-block" action="#" method="post">
+            <div class="form-group">
+              <label class="sr-only" for="inputName">Full name</label>
+
+              <input id="inputName" class="form-control" type="text" placeholder="Adam Smith" required />
+            </div>
+
+            <div class="form-group">
+              <label for="inputMail" class="sr-only">Email Address</label>
+
+              <input id="inputMail" class="form-control" type="email" placeholder="adam.smith@mail.com" required />
+            </div>
+
+            <div class="form-group">
+              <label for="inputMessage" class="sr-only">Your Message</label>
+
+              <textarea id="inputMessage" class="form-control" name="message" cols="30" rows="8" required></textarea>
+            </div>
+
+            <div class="form-group">
+              <button class="btn btn-default center-block" type="submit" value="Hire me">Hire me</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer id="footer">
+    <div class="container">
+      <ul class="soc-media-ul">
+        <li>
+          <a href="http://twitter.com/AlexDevero" class="fa fa-twitter" target="_blank"></a>
+        </li>
+
+        <li>
+          <a href="https://plus.google.com/u/0/+AlexDevero" class="fa fa-google-plus" target="_blank"></a>
+        </li>
+
+        <li>
+          <a href="http://cz.linkedin.com/pub/alex-devero/38/262/70/" class="fa fa-linkedin" target="_blank"></a>
+        </li>
+
+        <li>
+          <a href="https://www.behance.net/d3v3r0" class="fa fa-behance" target="_blank"></a>
+        </li>
+
+        <li>
+          <a href="mailto:example@mail.com" class="fa fa-envelope"></a>
+        </li>
+      </ul>
+    </div>
+  </footer>
+</div>
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js'></script>
 
         <script src="js/index.js"></script>
 
