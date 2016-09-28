@@ -1,20 +1,22 @@
+$primary-color: #34495e;
+$primary-color-shadow: #2c3e50;
+$secondary-color: #1abc9c;
+
 html,
 body,
 main {
   height: 100%;
 }
 
-::-moz-selection {
-  background: #34495e;
+::selection {
+  background: $primary-color;
   color: #fff;
 }
 
-::selection {
-  background: #34495e;
-  color: #fff;
-}
+// Jumbotrons 
 
 .jumbotron {
+  // Stops gaps between jumbotrons
   padding-top: 150px;
   padding-bottom: 150px;
   margin-bottom: 0;
@@ -24,22 +26,22 @@ main {
   position: absolute;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 
 .photo-cover {
-  background: #34495e url(https://static.pexels.com/photos/36487/above-adventure-aerial-air-large.jpg) no-repeat center center/cover fixed;
+  background: #34495e url(https://static.pexels.com/photos/36487/above-adventure-aerial-air-large.jpg) no-repeat center center / cover fixed;
   height: 100%;
   position: relative;
 }
 
+
 .background-primary {
-  background: #34495e;
+  background: $primary-color;
 }
 
 .background-secondary {
-  background: #2c3e50;
+  background: $primary-color-shadow;
 }
 
 .large {
@@ -51,14 +53,15 @@ main {
 }
 
 /* Header */
+
 .transparent {
   background: transparent;
 }
 
 .navbar-inverse {
-  -webkit-transition: all 0.2s ease-in;
   transition: all 0.2s ease-in;
 }
+// Portfolio
 
 .thumbnail {
   cursor: pointer;
@@ -71,17 +74,16 @@ main {
   left: 0;
   width: 100%;
   height: 100%;
-  background: #1abc9c;
+  background: $secondary-color;
   opacity: 0;
-  -webkit-transition: all 0.2s ease-in;
   transition: all 0.2s ease-in;
 }
 
 .thumbnail:hover .thumbnail-overlay {
   opacity: 1;
-  -webkit-transition: all 0.2s ease-in;
   transition: all 0.2s ease-in;
 }
+// Projects Pages
 
 .full-screen {
   background: #eee;
@@ -91,6 +93,7 @@ main {
   top: 0;
   left: 0;
   display: none;
+  // Avoids leaving portfolio screen stuck up
   overflow-y: scroll;
 }
 
