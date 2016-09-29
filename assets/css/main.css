@@ -1644,6 +1644,14 @@
 		font-size: 16.5pt;
 		font-weight: normal;
 		line-height: 1.75;
+		
+  /*font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.4;*/
+  
+  
+
 	}
 
 		@media screen and (max-width: 1680px) {
@@ -1700,6 +1708,7 @@
 
 	h1, h2, h3, h4, h5, h6 {
 		color: #ffffff;
+		font-family: "Raleway";
 		font-weight: bold;
 		line-height: 1.5;
 		margin: 0 0 0.5em 0;
