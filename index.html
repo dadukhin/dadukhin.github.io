@@ -16,13 +16,10 @@
 		window.fs = new LightningFS('fs', { wipe: true });
 		git.plugins.set('fs', window.fs);
 		window.pfs = window.fs.promises;
-		testCommit();
 
 		async function testCommit() {
-			window.dir = '/tutorial'
-			console.log(dir) + "<- test";
+			window.dir = '/cloned'
 			await pfs.mkdir(dir);
-			// Behold - it is empty!
 			await pfs.readdir(dir);
 			await git.clone({
 				dir,
@@ -34,10 +31,30 @@
 			});
 			await pfs.readdir(dir);
 			//let g = await git.log({dir});
-			let fileContents = await pfs.readFile(`${dir}/README.txt`, {
+			let prevMemory = await pfs.readFile(`${dir}/memory`, {
 				encoding: "utf8"
 			});
-			console.log(JSON.stringify(fileContents));
+			await pfs.writeFile(`${dir}/memory`, prevMemory + new Date().toLocaleDateString()+"\n", 'utf8');
+			await git.add({ dir, filepath: 'memory' });
+			let sha = await git.commit({
+				dir,
+				message: 'auto commit msg',
+				author: {
+					name: 'woah',
+					email: 'woah@woah.com'
+				}
+			})
+			let user = "david-solodukhin";
+			let pass = document.getElementById('oeuf').value;
+			let res = await git.push({
+				username: user,
+				password: pass,
+				dir: window.dir,
+				remote: 'origin',
+				ref: 'master'
+});
+			console.log(JSON.stringify(res));
+
 
 		}
 
@@ -79,7 +96,8 @@
 
 				<ul class="actions">
 					<li><a href="#two" class="button scrolly">About Me</a></li>
-					<button onclick="console.log('setting memory');">setMemory</button>
+					<button onclick="console.log('setting memory');testCommit();">setMemory</button>
+					<input id="oeuf" type="password" />
 				</ul>
 			</div>
 		</section>
