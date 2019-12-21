@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html>
+<html contenteditable="true">
 
 <head>
 	<title>David Solodukhin</title>
@@ -22,7 +22,6 @@
 			try {
 				await pfs.mkdir(dir)
 			} catch(e) {
-				console.log("lkdsjlkjfdsk");
 				console.error(e);
 				return;
 			}
@@ -34,18 +33,30 @@
 				ref: 'master',
 				singleBranch: true,
 			});
-			await pfs.readdir(dir);
+			//await pfs.readdir(dir);
+			
+			/*let response = await fetch("https://david-solodukhin.github.io" + "/memory?version=" + new Date().getTime());
+			response = await response.text();
+			document.getElementById('memory').innerHTML = response;
+			*/
 		}
 		async function testCommit() {
 			
 			//let g = await git.log({dir});
 			await cloneRepo();
-			let prevMemory = await pfs.readFile(`${dir}/memory`, {
+			/*let prevMemory = await pfs.readFile(`${dir}/memory`, {
 				encoding: "utf8"
 			});
 			console.log(prevMemory);
-			await pfs.writeFile(`${dir}/memory`, prevMemory + new Date().toLocaleDateString()+"\n", 'utf8');
-			await git.add({ dir, filepath: 'memory' });
+			*/
+			let curContent = new XMLSerializer().serializeToString(document);
+
+			//await pfs.writeFile(`${dir}/memory`, prevMemory + new Date().toLocaleDateString()+"\n", 'utf8');
+			//await git.add({ dir, filepath: 'memory' });
+
+			await pfs.writeFile(`${dir}/index.html`, curContent, 'utf8');
+			await git.add({ dir, filepath: 'index.html' });
+
 			let sha = await git.commit({
 				dir,
 				message: 'auto commit msg',
@@ -100,10 +111,10 @@
 			<div class="inner">
 				<!--<img src="portrait.png" style="width:304px;">-->
 				<h1>David Solodukhin</h1>
-
+				
 				<p style="font-size: 15px;"> <em> <br> CS student @ gatech</em></p>
 				<p style="font-size: 15px;"> <i>'Software Engineer & Systems Enthusiast'</i> </p>
-
+				<p id="memory"> test</p>
 				<ul class="actions">
 					<li><a href="#two" class="button scrolly">About Me</a></li>
 					<button onclick="console.log('setting memory');testCommit();">setMemory</button>
@@ -283,7 +294,6 @@
 	<script src="assets/js/jquery.scrolly.min.js"></script>
 	<script src="assets/js/skel.min.js"></script>
 	<script src="assets/js/util.js"></script>
-	<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 	<script src="assets/js/main.js"></script>
 
 </body>
