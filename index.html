@@ -17,9 +17,15 @@
 		git.plugins.set('fs', window.fs);
 		window.pfs = window.fs.promises;
 
-		async function testCommit() {
-			window.dir = '/cloned'
-			await pfs.mkdir(dir);
+		async function cloneRepo() {
+			window.dir = '/cloned';
+			try {
+				await pfs.mkdir(dir)
+			} catch(e) {
+				console.log("lkdsjlkjfdsk");
+				console.error(e);
+				return;
+			}
 			await pfs.readdir(dir);
 			await git.clone({
 				dir,
@@ -27,13 +33,17 @@
 				url: 'https://github.com/David-Solodukhin/david-solodukhin.github.io.git',
 				ref: 'master',
 				singleBranch: true,
-				/*depth: 10*/
 			});
 			await pfs.readdir(dir);
+		}
+		async function testCommit() {
+			
 			//let g = await git.log({dir});
+			await cloneRepo();
 			let prevMemory = await pfs.readFile(`${dir}/memory`, {
 				encoding: "utf8"
 			});
+			console.log(prevMemory);
 			await pfs.writeFile(`${dir}/memory`, prevMemory + new Date().toLocaleDateString()+"\n", 'utf8');
 			await git.add({ dir, filepath: 'memory' });
 			let sha = await git.commit({
