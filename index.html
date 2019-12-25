@@ -13,12 +13,13 @@
 		getRecentContent();
 
 		async function getRecentContent() {
-			let sha = localStorage.getItem('latestHash');
+			let commits = await fetch("https://api.github.com/repos/David-Solodukhin/david-solodukhin.github.io/commits");
+			commits = await commits.json();
+			let sha = commits[0].sha;
 			let response = "";
 			if (!sha || sha.length != 40) {
 				response = await fetch("https://raw.githubusercontent.com/David-Solodukhin/david-solodukhin.github.io/master/memory");
 			} else {
-				console.log("found hash");
 				response = await fetch("https://raw.githubusercontent.com/David-Solodukhin/david-solodukhin.github.io/" + sha + "/memory");
 			}
 			response = await response.text();

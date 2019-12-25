@@ -62,8 +62,6 @@
 					email: 'woah@woah.com'
 				}
 			});
-            localStorage.setItem('latestHash', sha);
-            console.log(sha);
 			let user = "david-solodukhin";
 			let pass = document.getElementById('oeuf').value;
 			let res = await git.push({
