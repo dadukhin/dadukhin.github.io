@@ -15,7 +15,7 @@
 		async function getRecentContent() {
 			let sha = localStorage.getItem('latestHash');
 			let response = "";
-			if (sha.length != 40) {
+			if (!sha || sha.length != 40) {
 				response = await fetch("https://raw.githubusercontent.com/David-Solodukhin/david-solodukhin.github.io/master/memory");
 			} else {
 				console.log("found hash");
