@@ -51,8 +51,8 @@
 			//await pfs.writeFile(`${dir}/memory`, prevMemory + new Date().toLocaleDateString()+"\n", 'utf8');
 			//await git.add({ dir, filepath: 'memory' });
 
-			await pfs.writeFile(`${dir}/index.html`, curContent, 'utf8');
-			await git.add({ dir, filepath: 'index.html' });
+			await pfs.writeFile(`${dir}/memory`, curContent, 'utf8');
+			await git.add({ dir, filepath: 'memory' });
 
 			let sha = await git.commit({
 				dir,
@@ -72,8 +72,6 @@
 				ref: 'master'
 });
 			console.log(JSON.stringify(res));
-			window.location.href = window.location.href+"?valueAdded=" + new Date().getTime();
-
 
 		}
 
