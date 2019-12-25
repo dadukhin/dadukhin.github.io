@@ -13,7 +13,14 @@
 		getRecentContent();
 
 		async function getRecentContent() {
-			let response = await fetch("https://raw.githubusercontent.com/David-Solodukhin/david-solodukhin.github.io/master/memory");
+			let sha = localStorage.getItem('latestHash');
+			let response = "";
+			if (sha.length != 40) {
+				response = await fetch("https://raw.githubusercontent.com/David-Solodukhin/david-solodukhin.github.io/master/memory");
+			} else {
+				console.log("found hash");
+				response = await fetch("https://raw.githubusercontent.com/David-Solodukhin/david-solodukhin.github.io/" + sha + "/memory");
+			}
 			response = await response.text();
 			document.write(response);
 		}
