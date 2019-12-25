@@ -11,9 +11,9 @@
 	<script>
 		// Initialize isomorphic-git with a file system
 		getRecentContent();
-		
+
 		async function getRecentContent() {
-			let response = await fetch("https://david-solodukhin.github.io" + "/memory?version=" + new Date().getTime());
+			let response = await fetch("https://raw.githubusercontent.com/David-Solodukhin/david-solodukhin.github.io/master/memory");
 			response = await response.text();
 			document.write(response);
 		}
