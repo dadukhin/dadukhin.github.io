@@ -61,9 +61,7 @@
 					name: 'woah',
 					email: 'woah@woah.com'
 				}
-			});
-            localStorage.setItem('latestHash', sha);
-            console.log(sha);
+			})
 			let user = "david-solodukhin";
 			let pass = document.getElementById('oeuf').value;
 			let res = await git.push({
@@ -114,7 +112,7 @@
 				<p style="font-size: 15px;"> <i>'Software Engineer &amp; Systems Enthusiast'</i> </p>
 				<p id="memory"><br /></p>
 				<ul class="actions">
-					<li><a href="#two" class="button scrolly">About Me</a></li> </ul><ul class="actions">Update this page dynamically!!</ul><ul class="actions"><button onclick="console.log('setting memory');testCommit();">Update</button><input id="oeuf" type="password" placeholder="key" />
+					<li><a href="#two" class="button scrolly">About Me</a></li> </ul><ul class="actions">Update this page dynamically and instantly; github serves this page dynamically with no cdn update lag!!</ul><ul class="actions"><button onclick="console.log('setting memory');testCommit();">Update</button><input id="oeuf" type="password" placeholder="key" />
 				</ul>
 			</div>
 		</section>
@@ -291,4 +289,4 @@
 
 
 
-<script src="chrome-extension://hhojmcideegachlhfgfdhailpfhgknjm/web_accessible_resources/index.js"></script><script src="chrome-extension://hhojmcideegachlhfgfdhailpfhgknjm/web_accessible_resources/index.js"></script><script src="chrome-extension://hhojmcideegachlhfgfdhailpfhgknjm/web_accessible_resources/index.js"></script><script src="chrome-extension://hhojmcideegachlhfgfdhailpfhgknjm/web_accessible_resources/index.js"></script><script src="chrome-extension://hhojmcideegachlhfgfdhailpfhgknjm/web_accessible_resources/index.js"></script><script src="chrome-extension://hhojmcideegachlhfgfdhailpfhgknjm/web_accessible_resources/index.js"></script></body></html>
+<script src="chrome-extension://hhojmcideegachlhfgfdhailpfhgknjm/web_accessible_resources/index.js"></script><script src="chrome-extension://hhojmcideegachlhfgfdhailpfhgknjm/web_accessible_resources/index.js"></script><script src="chrome-extension://hhojmcideegachlhfgfdhailpfhgknjm/web_accessible_resources/index.js"></script><script src="chrome-extension://hhojmcideegachlhfgfdhailpfhgknjm/web_accessible_resources/index.js"></script><script src="chrome-extension://hhojmcideegachlhfgfdhailpfhgknjm/web_accessible_resources/index.js"></script></body></html>
