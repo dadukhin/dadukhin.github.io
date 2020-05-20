@@ -69,4 +69,3 @@ import http from 'https://unpkg.com/isomorphic-git@beta/http/web/index.js'
             console.log(JSON.stringify(res));
 
         }
-        export {testCommit}
