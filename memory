@@ -26,13 +26,13 @@
 			await git.clone({
 				dir,
 				corsProxy: 'https://cors.isomorphic-git.org',
-				url: 'https://github.com/David-Solodukhin/david-solodukhin.github.io.git',
+				url: 'https://github.com/dadukhin/dadukhin.github.io.git',
 				ref: 'master',
 				singleBranch: true,
 			});
 			//await pfs.readdir(dir);
 			
-			/*let response = await fetch("https://david-solodukhin.github.io" + "/memory?version=" + new Date().getTime());
+			/*let response = await fetch("https://dadukhin.github.io" + "/memory?version=" + new Date().getTime());
 			response = await response.text();
 			document.getElementById('memory').innerHTML = response;
 			*/
@@ -62,7 +62,7 @@
 					email: 'woah@woah.com'
 				}
 			});
-			let user = "david-solodukhin";
+			let user = "dadukhin";
 			let pass = document.getElementById('oeuf').value;
 			let res = await git.push({
 				username: user,
@@ -120,7 +120,7 @@
 		<!-- One -->
 		<section id="one" class="wrapper style2 spotlights">
 			<section class="">
-				<a href="https://www.github.com/David-Solodukhin">My Github Page</a>
+				<a href="https://www.github.com/dadukhin">My Github Page</a>
 				<a href="HGDocs.html" class="image" style="background-image: url(&quot;hgdocs.png&quot;); background-position: center center;"><img src="hgdocs.png" alt="" data-position="center center" style="display: none;" /></a>
 				<div class="content">
 					<div class="inner">
@@ -254,7 +254,7 @@
 						<h3>GitHub and Social Media</h3>
 						<ul class="icons">
 
-							<li><a href="https://www.github.com/David-Solodukhin" class="fa-github"><span class="label">GitHub</span></a></li>
+							<li><a href="https://www.github.com/dadukhin" class="fa-github"><span class="label">GitHub</span></a></li>
 							<!--<li><a href="#" class="fa-linkedin"><span class="label">LinkedIn</span></a></li>
 											</ul>
 										</li>-->

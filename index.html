@@ -13,14 +13,14 @@
 		getRecentContent();
 
 		async function getRecentContent() {
-			let commits = await fetch("https://api.github.com/repos/David-Solodukhin/david-solodukhin.github.io/commits");
+			let commits = await fetch("https://api.github.com/repos/dadukhin/dadukhin.github.io/commits");
 			commits = await commits.json();
 			let sha = commits[0].sha;
 			let response = "";
 			if (!sha || sha.length != 40) {
-				response = await fetch("https://raw.githubusercontent.com/David-Solodukhin/david-solodukhin.github.io/master/memory");
+				response = await fetch("https://raw.githubusercontent.com/dadukhin/dadukhin.github.io/master/memory");
 			} else {
-				response = await fetch("https://raw.githubusercontent.com/David-Solodukhin/david-solodukhin.github.io/" + sha + "/memory");
+				response = await fetch("https://raw.githubusercontent.com/dadukhin/dadukhin.github.io/" + sha + "/memory");
 			}
 			response = await response.text();
 			document.write(response);
