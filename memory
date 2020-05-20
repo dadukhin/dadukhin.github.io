@@ -12,7 +12,7 @@
 	<script>
 		var index;
 		import("./gitModule.js")
-  		.then((obj) => (index = obj));
+  		.then((obj) =&gt; (index = obj));
 	</script>
 
 
@@ -44,8 +44,6 @@
 			<div class="inner">
 				<!--<img src="portrait.png" style="width:304px;">-->
 				<h1>David Solodukhin</h1>
-				
-				<p style="font-size: 15px;"> <em> <br /> CS student @ gatech</em></p>
 				<p style="font-size: 15px;"> <i>'Software Engineer &amp; Systems Enthusiast'</i> </p>
 				<p id="memory"><br /></p>
 				<ul class="actions">
