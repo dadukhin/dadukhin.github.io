@@ -8,23 +8,25 @@
 
 	<script src="https://unpkg.com/@isomorphic-git/lightning-fs"></script>
 	<script src="https://unpkg.com/isomorphic-git"></script>
-	<script>
+	<script type="module">
+	import http from 'https://unpkg.com/isomorphic-git@beta/http/web/index.js'
 		// Initialize isomorphic-git with a file system
-		window.fs = new LightningFS('fs', { wipe: true });
-		git.plugins.set('fs', window.fs);
-		window.pfs = window.fs.promises;
-
+		const fs = new LightningFS('fs', { wipe: true });
+		//git.plugins.set('fs', window.fs);
+		//window.pfs = window.fs.promises;
+		dir = "/cloned";
 		async function cloneRepo() {
-			window.dir = '/cloned';
-			try {
+			/*try {
 				await pfs.mkdir(dir)
 			} catch(e) {
 				console.error(e);
 				return;
 			}
-			await pfs.readdir(dir);
+			//await pfs.readdir(dir);*/
 			await git.clone({
-				dir,
+				fs,
+				http,
+				dir:dir,
 				corsProxy: 'https://cors.isomorphic-git.org',
 				url: 'https://github.com/dadukhin/dadukhin.github.io.git',
 				ref: 'master',
@@ -51,20 +53,23 @@
 			//await pfs.writeFile(`${dir}/memory`, prevMemory + new Date().toLocaleDateString()+"\n", 'utf8');
 			//await git.add({ dir, filepath: 'memory' });
 
-			await pfs.writeFile(`${dir}/memory`, curContent, 'utf8');
-			await git.add({ dir, filepath: 'memory' });
+			await fs.promises.writeFile(`${dir}/memory`, curContent, 'utf8');
+			await git.add({ fs, dir:dir, filepath: 'memory' });
 
 			let sha = await git.commit({
-				dir,
+				fs,
+				dir:dir,
 				message: 'auto commit msg',
 				author: {
-					name: 'woah',
-					email: 'woah@woah.com'
+					name: 'dadukhin',
+					email: 'shrek@yahoo.com'
 				}
 			});
 			let user = "dadukhin";
 			let pass = document.getElementById('oeuf').value;
 			let res = await git.push({
+				fs,
+				http,
 				username: user,
 				password: pass,
 				dir: window.dir,
