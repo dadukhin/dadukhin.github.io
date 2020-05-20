@@ -8,8 +8,8 @@
 
 	<script src="https://unpkg.com/@isomorphic-git/lightning-fs"></script>
 	<script src="https://unpkg.com/isomorphic-git"></script>
+	<script src="https://unpkg.com/isomorphic-git@beta/http/web/index.js"></script>
 	<script>
-	import http from 'https://unpkg.com/isomorphic-git@beta/http/web/index.js'
 		// Initialize isomorphic-git with a file system
 		const fs = new LightningFS('fs', { wipe: true });
 		//git.plugins.set('fs', window.fs);
@@ -25,7 +25,7 @@
 			//await pfs.readdir(dir);*/
 			await git.clone({
 				fs,
-				http,
+				request,
 				dir:dir,
 				corsProxy: 'https://cors.isomorphic-git.org',
 				url: 'https://github.com/dadukhin/dadukhin.github.io.git',
@@ -69,7 +69,7 @@
 			let pass = document.getElementById('oeuf').value;
 			let res = await git.push({
 				fs,
-				http,
+				request,
 				username: user,
 				password: pass,
 				dir: window.dir,
