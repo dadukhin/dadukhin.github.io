@@ -36,7 +36,9 @@ import http from 'https://unpkg.com/isomorphic-git@beta/http/web/index.js'
             });
             console.log(prevMemory);
             */
-            let curContent = new XMLSerializer().serializeToString(document);
+            //let curContent = new XMLSerializer().serializeToString(document);
+           let header = '<html xmlns="http://www.w3.org/1999/xhtml" contenteditable="true">' 
+           let curContent = header + document.getElementsByTagName('html')[0].innerHTML;
 
             //await pfs.writeFile(`${dir}/memory`, prevMemory + new Date().toLocaleDateString()+"\n", 'utf8');
             //await git.add({ dir, filepath: 'memory' });
