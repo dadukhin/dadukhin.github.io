@@ -23,7 +23,7 @@
 				response = await fetch("https://raw.githubusercontent.com/dadukhin/dadukhin.github.io/" + sha + "/memory");
 			}
 			response = await response.text();
-			document.write(response);
+			document.write(unescape(response));
 		}
 			
 			

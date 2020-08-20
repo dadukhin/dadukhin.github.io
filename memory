@@ -13,7 +13,7 @@
 		var index;
       console.log("test")
 		import("./gitModule.js")
-   .then((obj) =&gt; (index = obj));
+   .then((obj) => (index = obj));
 	</script>
 
 
