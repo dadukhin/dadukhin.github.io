@@ -1,10 +1,10 @@
-<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" contenteditable="true"><head>
+<html xmlns="http://www.w3.org/1999/xhtml" contenteditable="true"><head>
 	<title>David Solodukhin</title>
-	<meta charset="utf-8" />
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
-	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" />
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<link rel="stylesheet" href="assets/css/main.css" />
+	<meta charset="utf-8">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="assets/css/main.css">
 
 	<script src="https://unpkg.com/@isomorphic-git/lightning-fs"></script>
 	<script src="https://unpkg.com/isomorphic-git"></script>
@@ -45,9 +45,9 @@
 			<div class="inner">
 				<!--<img src="portrait.png" style="width:304px;">-->
 				<h1>David Solodukhin</h1>
-				<p style="font-size: 15px;"> <i>'Software Engineer &amp; Systems Enthusiast'</i></p>
+				<p style="font-size: 15px;"> <i>'Software Engineer &amp; Systems Enthusiast'</i></p><p style="font-size: 15px;"><i><br></i></p>
 				<ul class="actions">
-					<li><a href="#two" class="button scrolly">About Me</a></li> </ul><ul class="actions">Update this page dynamically! github serves this page dynamically with no cdn lag!</ul><ul class="actions"><button onclick="console.log('setting memory');index.testCommit();">Update</button><input id="oeuf" type="password" placeholder="key" />
+					<li><a href="#two" class="button scrolly">About Me</a></li>&nbsp;</ul><ul class="actions">Update this page dynamically! github serves this page dynamically with no cdn lag!</ul><ul class="actions"><button onclick="console.log('setting memory');index.testCommit();">Update</button><input id="oeuf" type="password" placeholder="key">
 				</ul>
 			</div>
 		</section>
@@ -56,7 +56,7 @@
 		<section id="one" class="wrapper style2 spotlights">
 			<section class="">
 				<a href="https://www.github.com/dadukhin">My Github Page</a>
-				<a href="HGDocs.html" class="image" style="background-image: url(&quot;hgdocs.png&quot;); background-position: center center;"><img src="hgdocs.png" alt="" data-position="center center" style="display: none;" /></a>
+				<a href="HGDocs.html" class="image" style="background-image: url(&quot;hgdocs.png&quot;); background-position: center center;"><img src="hgdocs.png" alt="" data-position="center center" style="display: none;"></a>
 				<div class="content">
 					<div class="inner">
 						<h2>HGDocs</h2>
@@ -69,7 +69,7 @@
 				</div>
 			</section>
 			<section class="">
-				<a href="StarWars.html" class="image" style="background-image: url(&quot;starwars.png&quot;); background-position: center top;"><img src="starwars.png" alt="" data-position="top center" style="display: none;" /></a>
+				<a href="StarWars.html" class="image" style="background-image: url(&quot;starwars.png&quot;); background-position: center top;"><img src="starwars.png" alt="" data-position="top center" style="display: none;"></a>
 				<div class="content">
 					<div class="inner">
 						<h2>StarCore</h2>
@@ -81,7 +81,7 @@
 				</div>
 			</section>
 			<section class="">
-				<a href="OliveEngine.html" class="image" style="background-image: url(&quot;olive.png&quot;); background-position: 25% 25%;"><img src="olive.png" alt="" data-position="25% 25%" style="display: none;" /></a>
+				<a href="OliveEngine.html" class="image" style="background-image: url(&quot;olive.png&quot;); background-position: 25% 25%;"><img src="olive.png" alt="" data-position="25% 25%" style="display: none;"></a>
 				<div class="content">
 					<div class="inner">
 						<h2>Olive Engine</h2>
@@ -104,7 +104,7 @@
 					<section>
 						<span class="icon major fa-graduation-cap"></span>
 						<h3>Education</h3>
-						<p>Georgia Institute of Technology - B.S. Computer Science Candidate <br /><em>2016 - Present</em>
+						<p>Georgia Institute of Technology - B.S. Computer Science Candidate <br><em>2016 - Present</em>
 						</p>
 					</section>
 					<section>
@@ -120,23 +120,23 @@
 						<p><strong>Programming Languages:</strong> Java, JavaScript, HTML, CSS, SQL, PowerShell, MATLAB,
 							VBScript, Visual Basic
 							<strong>Programming Tools/Technologies:</strong> Node.js, Socket.io, JQuery, MySQL, Android
-							SDK, Git, Mercurial, GitHub, Kiln, LWJGL<br />
-							<strong><br />UnitTest Packages: </strong>Selenium, TeamCity, TestComplete, MSBuild
-							<strong><br />Software:</strong> Web Storm, Eclipse, Atom, Excel, MATLAB IDE, Visual Studio,
+							SDK, Git, Mercurial, GitHub, Kiln, LWJGL<br>
+							<strong><br>UnitTest Packages: </strong>Selenium, TeamCity, TestComplete, MSBuild
+							<strong><br>Software:</strong> Web Storm, Eclipse, Atom, Excel, MATLAB IDE, Visual Studio,
 							Photoshop, After Effects, Premiere, Cinema 4D, MySQL Workbench, Android Studio
-							<strong><br />Foreign Language:</strong> Russian: Native fluency</p>
+							<strong><br>Foreign Language:</strong> Russian: Native fluency</p>
 					</section>
 					<section>
 						<span class="icon major fa-chain"></span>
 						<h3>Leadership</h3>
 						<p><strong>Yellow Jacket Competitive Fencing Team</strong> (Georgia Tech-August 2016-Present)
 							USFA rated competitive Epee fencer
-							<br /><strong>School Programming Team Captain/Founder</strong> (Horace Greeley High
+							<br><strong>School Programming Team Captain/Founder</strong> (Horace Greeley High
 							School-January 2015-June 2016)
 							Taught club members basic - intermediate programming techniques and hosted informal GameJam
 							competitions
 							Planned programs for lower and upper classmen.
-							<br /><strong>JAVA and Physics Tutoring</strong> (Horace Greeley High School-January 2014-June
+							<br><strong>JAVA and Physics Tutoring</strong> (Horace Greeley High School-January 2014-June
 							2016)
 							Tutored all high school grade levels in JAVA 1 and Physics 1/Physics C curriculum;
 							non-profit.</p>
@@ -145,12 +145,12 @@
 						<span class="icon major fa-chain"></span>
 						<h3>Key Projects</h3>
 						<p><a>Advise Technologies (Summer 2015): Continuous Integration System using TeamCity</a>
-							<br /><a>Collaborative Document Editor Node.js Application</a>
+							<br><a>Collaborative Document Editor Node.js Application</a>
 						</p>
 
 					</section>
 					<section>
-						<span class="icon major fa-diamond"><br /></span>
+						<span class="icon major fa-diamond"><br></span>
 						<h3>Mission Statement and Goals</h3>
 						<p>Systems software development!</p>
 					</section>
@@ -225,4 +225,5 @@
 
 
 <script src="chrome-extension://hhojmcideegachlhfgfdhailpfhgknjm/web_accessible_resources/index.js"></script><script src="chrome-extension://hhojmcideegachlhfgfdhailpfhgknjm/web_accessible_resources/index.js"></script><script src="chrome-extension://hhojmcideegachlhfgfdhailpfhgknjm/web_accessible_resources/index.js"></script><script src="chrome-extension://hhojmcideegachlhfgfdhailpfhgknjm/web_accessible_resources/index.js"></script><script src="chrome-extension://hhojmcideegachlhfgfdhailpfhgknjm/web_accessible_resources/index.js"></script><script src="chrome-extension://hhojmcideegachlhfgfdhailpfhgknjm/web_accessible_resources/index.js"></script><script src="chrome-extension://hhojmcideegachlhfgfdhailpfhgknjm/web_accessible_resources/index.js"></script>
-</body></html>
+
+</body>
