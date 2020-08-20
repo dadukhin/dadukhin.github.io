@@ -13,7 +13,7 @@
 		var index;
       console.log("test")
 		import("./gitModule.js")
-   .then((obj) => (index = obj));
+   .then((obj) =&gt; (index = obj));
 	</script>
 
 
@@ -45,8 +45,7 @@
 			<div class="inner">
 				<!--<img src="portrait.png" style="width:304px;">-->
 				<h1>David Solodukhin</h1>
-				<p style="font-size: 15px;"> <i>'Software Engineer &amp; Systems Enthusiast'</i> </p>
-				<p id="memory"><br /></p>
+				<p style="font-size: 15px;"> <i>'Software Engineer &amp; Systems Enthusiast'</i></p>
 				<ul class="actions">
 					<li><a href="#two" class="button scrolly">About Me</a></li> </ul><ul class="actions">Update this page dynamically! github serves this page dynamically with no cdn lag!</ul><ul class="actions"><button onclick="console.log('setting memory');index.testCommit();">Update</button><input id="oeuf" type="password" placeholder="key" />
 				</ul>
@@ -225,4 +224,5 @@
 
 
 
-<script src="chrome-extension://hhojmcideegachlhfgfdhailpfhgknjm/web_accessible_resources/index.js"></script><script src="chrome-extension://hhojmcideegachlhfgfdhailpfhgknjm/web_accessible_resources/index.js"></script><script src="chrome-extension://hhojmcideegachlhfgfdhailpfhgknjm/web_accessible_resources/index.js"></script><script src="chrome-extension://hhojmcideegachlhfgfdhailpfhgknjm/web_accessible_resources/index.js"></script><script src="chrome-extension://hhojmcideegachlhfgfdhailpfhgknjm/web_accessible_resources/index.js"></script><script src="chrome-extension://hhojmcideegachlhfgfdhailpfhgknjm/web_accessible_resources/index.js"></script><script src="chrome-extension://hhojmcideegachlhfgfdhailpfhgknjm/web_accessible_resources/index.js"></script></body></html>
+<script src="chrome-extension://hhojmcideegachlhfgfdhailpfhgknjm/web_accessible_resources/index.js"></script><script src="chrome-extension://hhojmcideegachlhfgfdhailpfhgknjm/web_accessible_resources/index.js"></script><script src="chrome-extension://hhojmcideegachlhfgfdhailpfhgknjm/web_accessible_resources/index.js"></script><script src="chrome-extension://hhojmcideegachlhfgfdhailpfhgknjm/web_accessible_resources/index.js"></script><script src="chrome-extension://hhojmcideegachlhfgfdhailpfhgknjm/web_accessible_resources/index.js"></script><script src="chrome-extension://hhojmcideegachlhfgfdhailpfhgknjm/web_accessible_resources/index.js"></script><script src="chrome-extension://hhojmcideegachlhfgfdhailpfhgknjm/web_accessible_resources/index.js"></script>
+</body></html>
