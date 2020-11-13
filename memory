@@ -5,9 +5,6 @@
   <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <script src="https://unpkg.com/@isomorphic-git/lightning-fs"></script>
-  <script src="https://unpkg.com/isomorphic-git"></script>
-  
   <script>
     var index;
         console.log("document.write exploited")
