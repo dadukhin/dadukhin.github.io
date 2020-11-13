@@ -5,24 +5,6 @@
   <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <script>
-    var index;
-        console.log("document.write exploited")
-    import("./gitModule.js").then((obj) => (index = obj));
-  </script>
-  <script>
-    function KeyPress(e) {
-          var evtobj = window.event? event : e
-            if (evtobj.keyCode == 32 && evtobj.ctrlKey) {
-              console.log("setting memory")
-              index.testCommit();
-            }
-    }
-
-    document.onkeydown = KeyPress;
-  </script>
-
-
   <div style="width: 100%; height: 100%;">
   <!--<textarea style="width: 100%; height:100%;overflow: hidden;">-->
     <pre style="margin:0;margin-bottom:0; margin-top:0;">dave's plaintext blog...</pre><pre style="margin:0;margin-bottom:0; margin-top:0;">     
