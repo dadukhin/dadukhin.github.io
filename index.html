@@ -19,9 +19,9 @@
             } else {
                 response = await fetch("https://raw.githubusercontent.com/dadukhin/dadukhin.github.io/" + sha + "/memory");
             }
-            response = await unescape(response.text());
+            response = await response.text();
             //document.write(unescape(response));
-            document.getElementsByTagName('html')[0].innerHTML=response
+            document.getElementsByTagName('html')[0].innerHTML=unescape(response)
             var us = document.createElement("script")
             us.setAttribute("src", "https://unpkg.com/@isomorphic-git/lightning-fs");
             us.setAttribute("type", "text/javascript");
