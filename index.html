@@ -8,7 +8,8 @@
     <script>
         // Initialize isomorphic-git with a file system
         getRecentContent();
-        function KeyPress(e) {
+       var index 
+       function KeyPress(e) {
           var evtobj = window.event? event : e
             if (evtobj.keyCode == 32 && evtobj.ctrlKey) {
               console.log("setting memory")
@@ -41,7 +42,6 @@
             us.setAttribute("id", "sc2")
             document.head.appendChild(us)
             
-            var index;
             console.log("document.write exploited")
             import("./gitModule.js").then((obj) => (index = obj));
   
