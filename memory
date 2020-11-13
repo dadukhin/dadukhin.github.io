@@ -22,7 +22,6 @@
     document.onkeydown = KeyPress;
   </script>
 
-<script src="https://unpkg.com/@isomorphic-git/lightning-fs" type="text/javascript"></script><script src="https://unpkg.com/isomorphic-git" type="text/javascript"></script></head>
 
 <body style="width: 100%; height: 100%; margin:0;">
   <div style="width: 100%; height: 100%;">
