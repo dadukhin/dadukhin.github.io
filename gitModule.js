@@ -38,6 +38,9 @@ import http from 'https://unpkg.com/isomorphic-git@beta/http/web/index.js'
             */
             //let curContent = new XMLSerializer().serializeToString(document);
            let header = '<html xmlns="http://www.w3.org/1999/xhtml" contenteditable="true">' 
+           
+           document.getElementById("s1").remove();
+           document.getElementById("s2").remove();
            let curContent = header + document.getElementsByTagName('html')[0].innerHTML;
 
             //await pfs.writeFile(`${dir}/memory`, prevMemory + new Date().toLocaleDateString()+"\n", 'utf8');

@@ -5,8 +5,8 @@
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <script src="https://unpkg.com/@isomorphic-git/lightning-fs"></script>
-    <script src="https://unpkg.com/isomorphic-git"></script>
+    <script id="s1" src="https://unpkg.com/@isomorphic-git/lightning-fs"></script>
+    <script id="s2" src="https://unpkg.com/isomorphic-git"></script>
     <script>
         // Initialize isomorphic-git with a file system
         getRecentContent();
@@ -22,7 +22,7 @@
                 response = await fetch("https://raw.githubusercontent.com/dadukhin/dadukhin.github.io/" + sha + "/memory");
             }
             response = await response.text();
-            /*document.write(unescape(response));
+            document.write(unescape(response));/*
             var us = document.createElement("script")
             us.setAttribute("src", "https://unpkg.com/@isomorphic-git/lightning-fs");
             us.setAttribute("type", "text/javascript");
