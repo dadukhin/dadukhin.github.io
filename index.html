@@ -43,7 +43,7 @@
             document.getElementsByTagName('body')[0].innerHTML=unescape(response)
             
             console.log("document.write exploited")
-            import("https://raw.githubusercontent.com/dadukhin/dadukhin.github.io/master/gitModule.js/master/gitModule.js").then((obj) => (index = obj));
+            import("./gitModule.js").then((obj) => (index = obj));
   
         }            
             
