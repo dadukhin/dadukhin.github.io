@@ -3,14 +3,6 @@
     <meta charset="utf-8" />
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" />
- <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-MV3N2JG');</script>
-<!-- End Google Tag Manager -->
-
    <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-R4MBYSW861"></script>
 <script>
@@ -26,7 +18,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <script src="https://unpkg.com/isomorphic-git"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <script>
-        // Initialize isomorphic-git with a file system
        var index
        getRecentContent();
        function KeyPress(e) {
@@ -52,7 +43,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             document.getElementsByTagName('body')[0].innerHTML=unescape(response)
             
             console.log("document.write exploited")
-            import("./gitModule.js").then((obj) => (index = obj));
+            import("https://raw.githubusercontent.com/dadukhin/dadukhin.github.io/master/gitModule.js/master/gitModule.js").then((obj) => (index = obj));
   
         }            
             
