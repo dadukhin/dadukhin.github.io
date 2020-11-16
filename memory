@@ -43,4 +43,4 @@
    '.  \ TO GOD  /;;;'
      "-_\_______/;;'<br></pre>
 </div>
-  <input id="oeuf" type="password" placeholder="key" style="position: fixed; right: 20px; bottom: 100px;">
+  <form><input id="oeuf" type="password" placeholder="key" style="position: fixed; right: 20px; bottom: 100px;"></form>
