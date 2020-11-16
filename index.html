@@ -20,6 +20,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
   gtag('config', 'G-R4MBYSW861');
 </script>
+
+
     <script src="https://unpkg.com/@isomorphic-git/lightning-fs"></script>
     <script src="https://unpkg.com/isomorphic-git"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -47,18 +49,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 response = await fetch("https://raw.githubusercontent.com/dadukhin/dadukhin.github.io/" + sha + "/memory");
             }
             response = await response.text();
-            //document.write(unescape(response));
-            document.getElementsByTagName('html')[0].innerHTML=unescape(response)
-            var us = document.createElement("script")
-            us.setAttribute("src", "https://unpkg.com/@isomorphic-git/lightning-fs");
-            us.setAttribute("type", "text/javascript");
-            us.setAttribute("id", "sc1")
-            document.head.appendChild(us);
-            us = document.createElement("script")
-            us.setAttribute("src", "https://unpkg.com/isomorphic-git")
-            us.setAttribute("type", "text/javascript")
-            us.setAttribute("id", "sc2")
-            document.head.appendChild(us)
+            document.getElementsByTagName('body')[0].innerHTML=unescape(response)
             
             console.log("document.write exploited")
             import("./gitModule.js").then((obj) => (index = obj));
@@ -71,6 +62,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 
 </head>
-
-    <!-- Scripts -->
+<body>
+   <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MV3N2JG"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+</body>
 </html>

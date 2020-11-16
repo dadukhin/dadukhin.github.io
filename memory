@@ -1,14 +1,4 @@
-<html xmlns="http://www.w3.org/1999/xhtml" contenteditable="true"><head>
-  <title>David Solodukhin</title>
-  <meta charset="utf-8">
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  </head><body><div style="width: 100%; height: 100%;">
-    <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MV3N2JG"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
+<div style="width: 100%; height: 100%;">
     <pre style="margin:0;margin-bottom:0; margin-top:0;">dave's plaintext blog...</pre><pre style="margin:0;margin-bottom:0; margin-top:0;">     
               inefficiently
             ______        beaming
@@ -54,11 +44,3 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
      "-_\_______/;;'<br></pre>
 </div>
   <input id="oeuf" type="password" placeholder="key" style="position: fixed; right: 20px; bottom: 100px;">
-  
-
-
-
-
-
-
-</body>
