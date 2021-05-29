@@ -22,6 +22,8 @@ p {
   letter-spacing: 1px;
   font-size:14px;
   color: #333333;
+  margin-left: 50px;
+  margin-right: 50px;
 }
 
 .header {
@@ -42,6 +44,7 @@ p {
   height:45vh;
   width:100%;
   margin: 0;
+  text-align:center;
   padding: 0;
 }
 
