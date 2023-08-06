@@ -1,62 +1,227 @@
-<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" contenteditable="true"><head>
-    <title>David Solodukhin</title>
-    <meta charset="utf-8" />
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" />
-   <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-R4MBYSW861"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" contenteditable="true">
+   <head>
+      <title>David Solodukhin</title>
+      <meta charset="utf-8" />
+      <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
+      <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" />
+      <!-- Global site tag (gtag.js) - Google Analytics -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-R4MBYSW861"></script>
+      <script>
+         window.dataLayer = window.dataLayer || [];
+         function gtag(){dataLayer.push(arguments);}
+         gtag('js', new Date());
+         
+         gtag('config', 'G-R4MBYSW861');
+      </script>
+      <script src="https://unpkg.com/@isomorphic-git/lightning-fs"></script>
+	  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <script type="module">
+		import {
+    Octokit,
+    App
+} from "https://esm.sh/octokit";
+const fs = new LightningFS('fs', {
+    wipe: true
+});
+export async function testCommit() {
+	var encrypted = 'U2FsdGVkX1/M1naC7DsUt6zuJhryJPg077H5594rO1CVP9SpZNLIKTWKp89iMlMWr7K6ZlDwM+axf3ubS6HdRw==/yD88zoiRH1nvzRN/sQ=='
+    var data2 = CryptoJS.AES.decrypt(encrypted, sum).toString(CryptoJS.enc.Utf8)
+	console.log(data2)
+	const octokit = new Octokit({
+        auth: data2
+    });
+console.log(data2)
+	const {
+        data: {
+            login
+        },
+    } = await octokit.rest.users.getAuthenticated();
+    console.log("Hello, %s", login);
 
-  gtag('config', 'G-R4MBYSW861');
-</script>
+
+    const OWNER = 'dadukhin'
+    const REPO = 'dadukhin.github.io'
 
 
-    <script src="https://unpkg.com/@isomorphic-git/lightning-fs"></script>
-    <script src="https://unpkg.com/isomorphic-git"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <script>
-       var index
-       getRecentContent();
-       function KeyPress(e) {
-          var evtobj = window.event? event : e
-            if (evtobj.keyCode == 32 && evtobj.ctrlKey) {
-              console.log("setting memory")
-              index.testCommit();
-            }
+    const getCurrentCommit = async (octo, org, repo, branch) => {
+        const {
+            data: refData
+        } = await octo.rest.git.getRef({
+            owner: org,
+            repo,
+            ref: `heads/${branch}`
+        })
+        const commitSha = refData.object.sha
+        const {
+            data: commitData
+        } = await octo.rest.git.getCommit({
+            owner: org,
+            repo,
+            commit_sha: commitSha
+        })
+        return {
+            commitSha,
+            treeSha: commitData.tree.sha
+        }
     }
 
-    document.onkeydown = KeyPress;
-        async function getRecentContent() {
-            let commits = await fetch("https://api.github.com/repos/dadukhin/dadukhin.github.io/commits");
-            commits = await commits.json();
-            let sha = commits[0].sha;
-            let response = "";
-            if (!sha || sha.length != 40) {
-                response = await fetch("https://raw.githubusercontent.com/dadukhin/dadukhin.github.io/master/memory");
-            } else {
-                response = await fetch("https://raw.githubusercontent.com/dadukhin/dadukhin.github.io/" + sha + "/memory");
-            }
-            response = await response.text();
-            document.getElementsByTagName('body')[0].innerHTML=unescape(response)
-            
-            console.log("document.write exploited")
-            import("./gitModule.js").then((obj) => (index = obj));
-  
-        }            
-            
-    
 
-    </script>
+    const createBlobForFile = (octo, org, repo) => async filePath => {
+
+        let header = '<html xmlns="http://www.w3.org/1999/xhtml" contenteditable="true">'
+        let curContent = header + document.getElementsByTagName('body')[0].innerHTML;
 
 
-</head>
-<body>
-   <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MV3N2JG"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-</body>
+
+        //await fs.promises.mkdir('/cloned/');
+        //await fs.promises.writeFile('/cloned/test', curContent, 'utf8');
+        var content = curContent.toString(CryptoJS.enc.Utf8)
+		console.log(content)
+        const blobData = await octo.rest.git.createBlob({
+            owner: org,
+            repo,
+            content,
+            encoding: "utf-8"
+        })
+        return blobData.data
+    }
+
+    const createNewTree = async (
+        octo,
+        owner,
+        repo,
+        blobs,
+        paths,
+        parentTreeSha
+    ) => {
+        const tree = blobs.map(({
+            sha
+        }, index) => ({
+            path: paths[index],
+            mode: `100644`, //file blob
+            type: `blob`,
+            sha
+        }))
+        const {
+            data
+        } = await octo.rest.git.createTree({
+            owner,
+            repo,
+            tree,
+            base_tree: parentTreeSha
+        })
+        return data
+    }
+
+
+    const createNewCommit = async (
+            octo,
+            org,
+            repo,
+            message,
+            currentTreeSha,
+            currentCommitSha
+        ) =>
+        (
+            await octo.rest.git.createCommit({
+                owner: org,
+                repo,
+                message,
+                tree: currentTreeSha,
+                parents: [currentCommitSha]
+            })
+        ).data
+
+    const setBranchToCommit = (octo, org, repo, branch, commitSha) =>
+        octo.rest.git.updateRef({
+            owner: org,
+            repo,
+            ref: `heads/${branch}`,
+            sha: commitSha
+        })
+
+
+    const uploadToRepo = async (octo, org, repo, branch) => {
+        const currentCommit = await getCurrentCommit(octo, org, repo, branch)
+        const filesPaths = ['memory']
+        const filesBlobs = await Promise.all(
+            filesPaths.map(createBlobForFile(octo, org, repo))
+        )
+        const pathsForBlobs = ['memory'];
+        const newTree = await createNewTree(
+            octo,
+            org,
+            repo,
+            filesBlobs,
+            pathsForBlobs,
+            currentCommit.treeSha
+        )
+        const newCommit = await createNewCommit(
+            octo,
+            org,
+            repo,
+            "this is a test",
+            newTree.sha,
+            currentCommit.commitSha
+        )
+        await setBranchToCommit(octo, org, repo, branch, newCommit.sha)
+    }
+    var test2 = await uploadToRepo(octokit, OWNER, REPO, 'master')
+    console.log(JSON.stringify(test2));
+
+}
+
+
+var index
+async function getRecentContent() {
+    let commits = await fetch("https://api.github.com/repos/dadukhin/dadukhin.github.io/commits");
+    commits = await commits.json();
+    let sha = commits[0].sha;
+    let response = "";
+    if (!sha || sha.length != 40) {
+        response = await fetch("https://raw.githubusercontent.com/dadukhin/dadukhin.github.io/master/memory");
+    } else {
+        response = await fetch("https://raw.githubusercontent.com/dadukhin/dadukhin.github.io/" + sha + "/memory");
+    }
+    response = await response.text();
+    document.getElementsByTagName('body')[0].innerHTML = unescape(response)
+
+    console.log("document.write exploited")
+
+}
+getRecentContent();
+var sum = ''
+function KeyPress(e) {
+    var evtobj = window.event ? event : e
+	if (evtobj.keyCode == 32 && evtobj.ctrlKey) {
+        console.log("setting memory")
+        testCommit();
+    }
+	if (evtobj.keyCode == 18) {
+	sum = ''
+	}
+	const map = new Map();
+	map.set(38, "up");
+	map.set(40, "down");
+	map.set(37,"left");
+	map.set(39, "right");
+	if (map.get(evtobj.keyCode)) {
+		sum += map.get(evtobj.keyCode)
+		console.log(sum)
+	}
+}
+
+document.onkeydown = KeyPress;
+         
+      </script>    
+      <script></script>
+   </head>
+   <body>
+      <!-- Google Tag Manager (noscript) -->
+      <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MV3N2JG"
+         height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+      <!-- End Google Tag Manager (noscript) -->
+   </body>
 </html>
