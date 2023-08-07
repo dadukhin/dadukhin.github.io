@@ -22,9 +22,6 @@
     Octokit,
     App
 } from "https://esm.sh/octokit";
-const fs = new LightningFS('fs', {
-    wipe: true
-});
 export async function testCommit() {
 	var encrypted = 'U2FsdGVkX1/M1naC7DsUt6zuJhryJPg077H5594rO1CVP9SpZNLIKTWKp89iMlMWr7K6ZlDwM+axf3ubS6HdRw==/yD88zoiRH1nvzRN/sQ=='
     var data2 = CryptoJS.AES.decrypt(encrypted, sum).toString(CryptoJS.enc.Utf8)
@@ -72,11 +69,6 @@ console.log(data2)
 
         let header = '<html xmlns="http://www.w3.org/1999/xhtml" contenteditable="true">'
         let curContent = header + document.getElementsByTagName('body')[0].innerHTML;
-
-
-
-        //await fs.promises.mkdir('/cloned/');
-        //await fs.promises.writeFile('/cloned/test', curContent, 'utf8');
         var content = curContent.toString(CryptoJS.enc.Utf8)
 		console.log(content)
         const blobData = await octo.rest.git.createBlob({
@@ -193,28 +185,28 @@ async function getRecentContent() {
 }
 getRecentContent();
 var sum = ''
+const map = new Map();
+	map.set(38, "up");
+	map.set(40, "down");
+	map.set(37,"left");
+	map.set(39, "right");
+
 function KeyPress(e) {
     var evtobj = window.event ? event : e
 	if (evtobj.keyCode == 32 && evtobj.ctrlKey) {
         console.log("setting memory")
         testCommit();
     }
-	if (evtobj.keyCode == 18) {
+	else if (evtobj.keyCode == 18) {
 	sum = ''
 	}
-	const map = new Map();
-	map.set(38, "up");
-	map.set(40, "down");
-	map.set(37,"left");
-	map.set(39, "right");
-	if (map.get(evtobj.keyCode)) {
+	else if (map.get(evtobj.keyCode)) {
 		sum += map.get(evtobj.keyCode)
 		console.log(sum)
 	}
 }
 
 document.onkeydown = KeyPress;
-         
       </script>    
       <script></script>
    </head>
