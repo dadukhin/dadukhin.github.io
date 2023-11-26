@@ -5,16 +5,6 @@
       <meta charset="utf-8" />
       <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
       <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" />
-      <!-- Global site tag (gtag.js) - Google Analytics -->
-      <script async src="https://www.googletagmanager.com/gtag/js?id=G-R4MBYSW861"></script>
-      <script>
-         window.dataLayer = window.dataLayer || [];
-         function gtag(){dataLayer.push(arguments);}
-         gtag('js', new Date());
-         
-         gtag('config', 'G-R4MBYSW861');
-      </script>
-      <script src="https://unpkg.com/@isomorphic-git/lightning-fs"></script>
 	  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <script type="module">
@@ -23,13 +13,11 @@
     App
 } from "https://esm.sh/octokit";
 export async function testCommit() {
-	var encrypted = 'U2FsdGVkX1/M1naC7DsUt6zuJhryJPg077H5594rO1CVP9SpZNLIKTWKp89iMlMWr7K6ZlDwM+axf3ubS6HdRw==/yD88zoiRH1nvzRN/sQ=='
-    var data2 = CryptoJS.AES.decrypt(encrypted, sum).toString(CryptoJS.enc.Utf8)
-	console.log(data2)
+	var encrypted = 'U2FsdGVkX1+9E8JtJZFBJlRSwIfCFCRWhm6t7E45F49o8qrvelz81BKiInd5hpzSLSDy6IVsk1+GmKe0AfYR2Y/wlSesNJltAbt6COwsccaXzq4RN7qr6Wo/YT2U55fZjP6bwmPIxQoA6WtaxTZBGw=='
+	var data2 = CryptoJS.AES.decrypt(encrypted, sum).toString(CryptoJS.enc.Utf8)
 	const octokit = new Octokit({
         auth: data2
     });
-console.log(data2)
 	const {
         data: {
             login
@@ -208,12 +196,7 @@ function KeyPress(e) {
 
 document.onkeydown = KeyPress;
       </script>    
-      <script></script>
    </head>
    <body>
-      <!-- Google Tag Manager (noscript) -->
-      <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MV3N2JG"
-         height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-      <!-- End Google Tag Manager (noscript) -->
    </body>
 </html>
