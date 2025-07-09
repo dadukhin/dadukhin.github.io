@@ -13,8 +13,8 @@
     App
 } from "https://esm.sh/octokit";
 export async function testCommit() {
-	var encrypted = 'U2FsdGVkX1+9E8JtJZFBJlRSwIfCFCRWhm6t7E45F49o8qrvelz81BKiInd5hpzSLSDy6IVsk1+GmKe0AfYR2Y/wlSesNJltAbt6COwsccaXzq4RN7qr6Wo/YT2U55fZjP6bwmPIxQoA6WtaxTZBGw=='
-	var data2 = CryptoJS.AES.decrypt(encrypted, sum).toString(CryptoJS.enc.Utf8)
+	var encrypted = 'U2FsdGVkX1+aCYnxHph5tQlT+ws6LrovAPVHys5cCVNSnsTQglt6OixZl6bWxgAJheex7PFbLlNj+xR8Ym2P8LVjKhQ99EHWZbhukL7h0cbKKkB2dhsmiDmqYlaf59nBI0l1gsaHUzgtf3auaSz0uw=='
+    var data2 = CryptoJS.AES.decrypt(encrypted, sum).toString(CryptoJS.enc.Utf8)
 	const octokit = new Octokit({
         auth: data2
     });
