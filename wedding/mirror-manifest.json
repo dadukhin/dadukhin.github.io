@@ -3,7 +3,7 @@
   "version": 1,
   "sourceUrl": "https://weekend-venue-edit-2027.patrick-lam2.chatgpt.site/",
   "mirrorUrl": "https://dadukhin.github.io/wedding/",
-  "generatedAt": "2026-09-29T13:38:48.897Z",
+  "generatedAt": "2026-09-29T13:41:11.023Z",
   "inputs": {
     "app/page.tsx": "0225e9261587b30ae476db1768ad7d6ecef2e91aa061def93ad0f9af027dc9b0",
     "app/VenuePlan.tsx": "f5b6ca9bfd168641946fc59bb78b7079efb43c211bef1c9cd5df9e0e64de75ad",
@@ -16,10 +16,11 @@
     "lib/venue-plans.mjs": "24463c4dab65ec10b39ae1e466b2693b7112b608dd3be4656a4b30df43e29e00"
   },
   "files": {
-    "assets/index-B9zBWlyv.js": "41606a9441cf968c15321c3addb69e7ae3b462da029735962c28e05829a89b5b",
-    "assets/index-C5Dve7d2.css": "5bf5a4c5e46887645a582ef6d7bd56c951c30799e48f1ad88ed8c3ad3c6a5f13",
+    ".gitattributes": "705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da",
+    "assets/index-CXLUZZDC.css": "c6a3a10a23ba73b629b24d8164ca47453896b6d0dfa2a1011682e756739db567",
+    "assets/index-D7s6GmF8.js": "41606a9441cf968c15321c3addb69e7ae3b462da029735962c28e05829a89b5b",
     "favicon.svg": "3e8863288c2d43dd33d2a71de317dcf9198f09932ea8d61e0def1b846a865435",
-    "index.html": "ca737f89ce61659ddcb7973257c704178341555c97305e04d465a54029c36e5b",
+    "index.html": "c52f5430266a28177c1954a9d57297fdeafce4bacac6d665e2b5a2e58adc8ebf",
     "og.png": "bb12bdfd04474dc004bf248f658718a9bcac7fcb8415d9b0b806432a8e433adb",
     "wedding-venue-research.xlsx": "932a682961e830dc23054fe0ecbc63228341ac785f3ae9917f0360ff8650a74b"
   }
